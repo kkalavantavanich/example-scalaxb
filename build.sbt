@@ -11,7 +11,7 @@ lazy val root = (project in file(".")).
     crossScalaVersions := Seq("2.13.2", "2.12.12")
   ))).
   settings(
-    name          := "est-scalaxb",
+    name          := "test-scalaxb",
     libraryDependencies ++= Seq(dispatch, scalaXml, scalaParser)
   ).
   settings(
