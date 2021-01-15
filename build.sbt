@@ -12,11 +12,8 @@ lazy val root = (project in file(".")).
   ))).
   settings(
     name          := "est-scalaxb",
-    libraryDependencies ++= Seq(dispatch),
-    libraryDependencies ++= {
-      if (scalaVersion.value startsWith "2.10") Seq()
-      else Seq(scalaXml, scalaParser)
-    }).
+    libraryDependencies ++= Seq(dispatch, scalaXml, scalaParser)
+  ).
   settings(
     scalaxbDispatchVersion in (Compile, scalaxb) := dispatchV,
     scalaxbPackageName in (Compile, scalaxb)     := "generated",
