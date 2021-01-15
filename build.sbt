@@ -19,7 +19,7 @@ lazy val root = (project in file(".")).
     }).
   settings(
     scalaxbDispatchVersion in (Compile, scalaxb) := dispatchV,
-    scalaxbPackageName in (Compile, scalaxb)     := "generated"
-    // scalaxbPackageNames in (Compile, scalaxb)    := Map(uri("http://schemas.microsoft.com/2003/10/Serialization/") -> "microsoft.serialization"),
-    // logLevel in (Compile, scalaxb) := Level.Debug
+    scalaxbPackageName in (Compile, scalaxb)     := "generated",
+    scalaxbPackageNames in (Compile, scalaxb)    := Map(uri("http://www.webserviceX.NET/") -> "microsoft.serialization"),
+    logLevel in (Compile, scalaxb) := Level.Debug
   )
